@@ -1,12 +1,15 @@
-# myapp/models.py
-
 from django.db import models
-from django.contrib.auth.models import User
 
+# Create your models here.
 class Customer(models.Model):
-   
-    country = models.CharField(max_length=100)
-    short_description = models.TextField()
-    profile_picture = models.TextField()
-    agreements = models.TextField()
-    userId = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reservations')
+    id = models.AutoField(primary_key=True)
+    image = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=250)
+    email = models.EmailField(max_length=100)
+    phone_no = models.CharField(max_length=100)
+    address = models.CharField(max_length=250)
+
+
+    def __str__(self):
+        return self.name

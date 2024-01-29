@@ -62,7 +62,7 @@
   min-width: 150px;
 }
 
-.table th {
+.table thead th {
   background-color: lightblue;
   color: white;
 }
@@ -73,11 +73,18 @@
   align-items: center;
 }
 
-.link a {
+.action-buttons {
   padding: 5px 20px;
   background-color: lightblue;
   color: white;
   border-radius: 5px;
+  border-color: lightblue;
+}
+
+.action-buttons:hover{
+  background-color: white;
+  border-color: white;
+  color: lightblue;
 }
 
 .title{
